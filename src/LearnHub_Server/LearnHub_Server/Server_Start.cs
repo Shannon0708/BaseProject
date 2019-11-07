@@ -12,6 +12,8 @@ namespace LearnHub_Server {
         /// </summary>
         public static void Main() {
             Console.WriteLine("Test: Hello C#");    //test
+
+            //測試項目
         }
 
     }
