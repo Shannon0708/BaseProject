@@ -1,20 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Network/Packet/Packet.cs">
     <Files>
-      <File FileName="Network/Packet/Type.cs" Line="9" Column="1" />
-      <File FileName="Network/Packet/Packet.cs" Line="60" Column="9" />
+      <File FileName="Network/Packet/Packet.cs" Line="50" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Network" expanded="True">
-            <Node name="Network" expanded="True">
-              <Node name="Packet" expanded="True">
-                <Node name="Packet.cs" selected="True" />
-              </Node>
-              <Node name="Util" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="Network" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
