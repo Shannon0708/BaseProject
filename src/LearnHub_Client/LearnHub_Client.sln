@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnHub_Client", "LearnHub_Client\LearnHub_Client.csproj", "{1B7A5075-9209-409B-818B-6B717CD39FDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B7A5075-9209-409B-818B-6B717CD39FDD}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{1B7A5075-9209-409B-818B-6B717CD39FDD}.Debug|anycpu.Build.0 = Debug|anycpu
+		{1B7A5075-9209-409B-818B-6B717CD39FDD}.Release|anycpu.ActiveCfg = Release|anycpu
+		{1B7A5075-9209-409B-818B-6B717CD39FDD}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
