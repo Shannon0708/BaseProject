@@ -11,7 +11,9 @@ namespace LearnHub_Server {
         /// 主程式
         /// </summary>
         public static void Main() {
-            Console.WriteLine("Test: Hello C#");    //test
+			
+			//Setting Git
+
         }
 
     }
