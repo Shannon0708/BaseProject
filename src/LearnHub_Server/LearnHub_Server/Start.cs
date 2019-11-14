@@ -11,8 +11,14 @@ namespace LearnHub_Server {
         /// 主程式
         /// </summary>
         public static void Main() {
-			
-			//Setting Git
+
+            Console.WriteLine("正在啟動服務器...\n");
+
+            //設定服務器
+
+            Console.ReadKey();  //避免閃退
+
+            Console.WriteLine("#  Server is Close");
 
         }
 
