@@ -1,6 +1,6 @@
 ﻿using System;
 
-//版本1.0.03
+//版本1.1.02
 namespace LearnHub_Server {
 
     /// <summary>
@@ -35,6 +35,5 @@ namespace LearnHub_Server {
             Server = new Server();
             //Server
         }
-
     }
 }
