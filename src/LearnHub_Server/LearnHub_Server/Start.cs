@@ -32,7 +32,6 @@ namespace LearnHub_Server {
         /// </summary>
         private static void Initial() {
             Server = new Server();
-
         }
 
     }
