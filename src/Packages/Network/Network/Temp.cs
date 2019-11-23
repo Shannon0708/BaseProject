@@ -19,7 +19,6 @@ namespace Network.Packet {
         RES256
     }
 
-
     /// <summary>
     /// 用戶資料列表
     /// </summary>
@@ -31,8 +30,5 @@ namespace Network.Packet {
         public Socket Socket { get; set; }
 
 	}
-
-
-
 
 }
