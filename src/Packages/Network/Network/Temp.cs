@@ -23,7 +23,10 @@ namespace Network.Packet {
     /// 用戶資料列表
     /// </summary>
 	public class User {
-    
+
+        //User的屬性{get; set;}
+        public int crcCode { get; set; }
+        public EncryptionType encryptionType { get; set; }
     
 	}
 

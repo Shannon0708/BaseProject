@@ -4,7 +4,19 @@ using System.Net;
 namespace Network.Packet {
 
     public class Send {
-        
+
+        /// <summary>
+        /// 創造int封包
+        /// </summary>
+        /// <param name="user">要發給誰</param>
+        /// <param name="packageType">封包型態，發過去要幹嘛</param>
+        /// <param name="Data">要發送封包的內容</param>
+        public void IntPacket(User user, PackageType packageType, int Data) {
+            byte[] Data_Byte = BitConverter.GetBytes(Data);     //把int Data轉成byte
+            byte[] Packet = BuildPackage(user.crcCode, packageType, user.encryptionType, Data_Byte);
+        }
+
+
         /// <summary>
         /// 封裝
         /// </summary>
