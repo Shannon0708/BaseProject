@@ -1,0 +1,25 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{3EBBFCEB-C708-4455-84A5-E17F3F425762}|Default">
+  <MonoDevelop.Ide.ItemProperties.LearnHub__Server PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="LearnHub_Server/Server.cs" Line="53" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LearnHub_Server" expanded="True">
+            <Node name="LearnHub_Server" expanded="True">
+              <Node name="Setup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
