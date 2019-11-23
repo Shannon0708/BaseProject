@@ -15,10 +15,12 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="Data">要發送封包的內容</param>
-        public void IntPacket(User user, PackageType packageType, int Data) {
+        public byte[] IntPacket(User user, PackageType packageType, int Data) {
             byte[] Data_Byte = BitConverter.GetBytes(Data);     //把int Data轉成byte
             byte[] Packet = BuildPackage(user.CrcCode, packageType, user.EncryptionType, Data_Byte);
-            SendPacket(user.Socket, Packet);
+            //SendPacket(user.Socket, Packet);
+
+            return Packet;
         }
 
         /// <summary>
