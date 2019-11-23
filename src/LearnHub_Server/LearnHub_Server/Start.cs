@@ -7,19 +7,31 @@ namespace LearnHub_Server {
     /// </summary>
     public class Start {
 
+        #region 參考
+        public static Server Server;    //服務器物件參考
+        #endregion
+
         /// <summary>
         /// 主程式
         /// </summary>
         public static void Main() {
 
-            Console.WriteLine("正在啟動服務器...\n");
+            Initial();  //主程式初始化
 
             //設定服務器
+            Server.Start(); //啟動服務器
+            Console.WriteLine("正在啟動服務器...\n");
 
             Console.ReadKey();  //避免閃退
-
             Console.WriteLine("#  Server is Close");
 
+        }
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        private static void Initial() {
+            Server = new Server();
         }
 
     }
