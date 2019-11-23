@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Net;
+using System.Net.Sockets;
 
 namespace Network.Packet {
 
     public class Send {
 
         /// <summary>
-        /// 創造int封包
+        /// 創造int封包，把int變成二進位(byte)丟給BuildPackage打包
         /// </summary>
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
@@ -14,8 +15,8 @@ namespace Network.Packet {
         public void IntPacket(User user, PackageType packageType, int Data) {
             byte[] Data_Byte = BitConverter.GetBytes(Data);     //把int Data轉成byte
             byte[] Packet = BuildPackage(user.crcCode, packageType, user.encryptionType, Data_Byte);
+            SendPacket(user.Socket, Packet);
         }
-
 
         /// <summary>
         /// 封裝
@@ -45,6 +46,22 @@ namespace Network.Packet {
             return Packet;
 
         }
+
+
+        private void SendPacket(Socket target, byte[] Packet) {
+            if (target.Connected) {
+                try {
+                    //發送資料給目標Send(封包, 長度, 起始位置)
+                    target.Send(Packet, Packet.Length, 0);
+                } catch(Exception ex) {
+                    Console.WriteLine($"封包發送失敗： {ex.Message}");
+                }
+            } else {
+                throw new Exception($"{target.RemoteEndPoint}： 已斷線");
+            }
+        }
+
+
 
     }
 
