@@ -10,7 +10,7 @@ namespace LearnHub_Server.Tests {
         public void Start() {
 
             Send send = new Send();
-            UnPack unPack = new UnPack();
+            Unpack unPack = new Unpack();
 
             User user = new User();
             user.CrcCode = 234625;
@@ -18,16 +18,16 @@ namespace LearnHub_Server.Tests {
 
             byte[] Data = send.IntPacket(user, PackageType.Test, 23849);
 
-            byte[] head = unPack.UpPackHead(Data);
+            byte[] head = unPack.Unpack_Head(Data);
 
-            int CrcCode = unPack.HeadCrcCode(head);
-            EncryptionType encryption = unPack.HeadEncryptionType(head);
-            PackageType packetType = unPack.HeadPackageType(head);
+            int CrcCode = unPack.Head_CrcCode(head);
+            EncryptionType encryption = unPack.Head_EncryptionType(head);
+            PackageType packetType = unPack.Head_PackageType(head);
 
-            int Length = unPack.HeadBodyLength(head);
-            byte[] Test = unPack.UpPackBody(Data, Length);
+            int Length = unPack.Head_BodyLength(head);
+            byte[] Test = unPack.Unpack_Body(Data, Length);
 
-            int IntData = unPack.BodyIntData(Test);
+            int IntData = unPack.Body_IntData(Test);
 
 
             Console.WriteLine($"Crc: {CrcCode}\tEn:{encryption}\tPack:{packetType}\tIntdata:{IntData}");
