@@ -9,20 +9,21 @@ namespace LearnHub_Server {
 
         //instance
         public Server() {
-            //執行初始化
+            //執行初始化 Initial()
         }
 
         //服務器初始化方法
-        private void Inistial() {
+        private void Initial() {
             //物件實例化
             //註冊回調方法
             //Others
         }
 
         //啟動服務器
-        private void Start() {
+        public void Start() {
             //TCP/IP連線
             //啟動線程
+            Console.WriteLine("Hello");
         }
 
         #region 線程 : 線程命名規則 ( 以Thread結尾 )
