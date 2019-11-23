@@ -31,7 +31,6 @@ namespace Network.Packet {
             bodyLength.CopyTo(Packet, 8);
 
             return Packet;
-
         }
 
     }
