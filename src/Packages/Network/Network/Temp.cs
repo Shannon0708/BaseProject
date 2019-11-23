@@ -26,9 +26,9 @@ namespace Network.Packet {
 	public class User {
 
         //User的屬性{get; set;}
-        public int crcCode { get; set; }
-        public EncryptionType encryptionType { get; set; }
-        public Socket socket { get; set; }
+        public int CrcCode { get; set; }
+        public EncryptionType EncryptionType { get; set; }
+        public Socket Socket { get; set; }
 
 	}
 

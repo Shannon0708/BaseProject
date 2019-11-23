@@ -14,7 +14,7 @@ namespace Network.Packet {
         /// <param name="Data">要發送封包的內容</param>
         public void IntPacket(User user, PackageType packageType, int Data) {
             byte[] Data_Byte = BitConverter.GetBytes(Data);     //把int Data轉成byte
-            byte[] Packet = BuildPackage(user.crcCode, packageType, user.encryptionType, Data_Byte);
+            byte[] Packet = BuildPackage(user.CrcCode, packageType, user.EncryptionType, Data_Byte);
             SendPacket(user.Socket, Packet);
         }
 
@@ -46,7 +46,11 @@ namespace Network.Packet {
             return Packet;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="Packet"></param>
         private void SendPacket(Socket target, byte[] Packet) {
             if (target.Connected) {
                 try {
