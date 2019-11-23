@@ -71,6 +71,8 @@ namespace Network.Packet {
     /// </summary>
     public class UnPack {
 
+        #region Head
+
         public int HeadCrcCode(byte[] head) {
             byte[] Int_Byte = new byte[4];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 0, Int_Byte, 0, 4);    //Array系統自帶的類別，將head從0開始複製至Int_Byte的0~4格
@@ -79,37 +81,42 @@ namespace Network.Packet {
             return CrcCode;
         }
 
-        public int HeadPackageType(byte[] head) {
+        public PackageType HeadPackageType(byte[] head) {
             byte[] PackageType_Byte = new byte[2];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 4, PackageType_Byte, 0, 2);
-            short PackageType = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(PackageType_Byte, 0));   //Byte->int
+            short PackageType = IPAddress.NetworkToHostOrder(BitConverter.ToInt16(PackageType_Byte, 0));   //Byte->int
 
             return (PackageType)PackageType;
         }
 
-        public int HeadEncryptionType(byte[] head) {
+        public EncryptionType HeadEncryptionType(byte[] head) {
             byte[] EncryptionType_Byte = new byte[2];      //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 6, EncryptionType_Byte, 0, 2);
-            short EncryptionType = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(EncryptionType_Byte, 0));   //Byte->int
+            short EncryptionType = IPAddress.NetworkToHostOrder(BitConverter.ToInt16(EncryptionType_Byte, 0));   //Byte->int
 
             return (EncryptionType)EncryptionType;
         }
         
-        public int Head_BodyLength(byte[] head) {
-            byte[] BodyLength = new_byte[4];
-            Array.Copy(head, 8, BodyLength, 0, 4);
-            int BodyLength = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(BodyLength, 0));
+        public int HeadBodyLength(byte[] head) {
+            byte[] BodyLength_Byte = new byte[4];
+            Array.Copy(head, 8, BodyLength_Byte, 0, 4);
+            int BodyLength = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(BodyLength_Byte, 0));
 
             return BodyLength;
-        }  
-        
-        public int BodyDataByte(byte[] body) {
-            byte[] data_Byte = new byte[data_Byte.Length];          //陣列宣告的方法，宣告一個4byte的陣列
-            Array.Copy(body, 0, data_Byte, 0, data_Byte.Length);
-            byte[] DataByte = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(data_Byte, 0));   //Byte->int
-
-            return (DataByte)DataByte;
         }
+
+        #endregion
+
+        #region Body
+
+        public int BodyIntData(byte[] body) {
+            byte[] data_Byte = new byte[4];          //陣列宣告的方法，宣告一個4byte的陣列
+            Array.Copy(body, 0, data_Byte, 0, data_Byte.Length);
+            int Data = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(data_Byte, 0));   //Byte->int
+
+            return Data;
+        }
+        #endregion
 
     }
 
