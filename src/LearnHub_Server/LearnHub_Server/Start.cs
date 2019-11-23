@@ -1,6 +1,6 @@
 ﻿using System;
 
-//版本1.0.02
+//版本1.0.01
 namespace LearnHub_Server {
 
     /// <summary>
@@ -33,6 +33,7 @@ namespace LearnHub_Server {
         /// </summary>
         private static void Initial() {
             Server = new Server();
+
         }
 
     }
