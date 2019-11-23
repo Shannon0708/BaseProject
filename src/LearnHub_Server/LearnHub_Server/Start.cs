@@ -34,8 +34,8 @@ namespace LearnHub_Server {
         private static void Initial() {
             //Server = new Server();
 
+            //測試項目
             Test test = new Test();
-
             test.Start();
 
         }

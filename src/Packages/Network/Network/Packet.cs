@@ -10,6 +10,7 @@ namespace Network.Packet {
     public class Send {
 
         /// <summary>
+        /// 目前屬於測試版本
         /// 創造int封包，把int變成二進位(byte)丟給BuildPackage打包
         /// </summary>
         /// <param name="user">要發給誰</param>
@@ -40,13 +41,14 @@ namespace Network.Packet {
             byte[] encryptionType_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((short)encryptionType));       
             byte[] bodyLength = BitConverter.GetBytes(IPAddress.HostToNetworkOrder(data_Byte.Length));
 
-            byte[] Packet = new byte[8 + data_Byte.Length];
+            byte[] Packet = new byte[12 + data_Byte.Length];
 
             //CopyTo:把前面的內容複製到後面陣列的起始位置(陣列,起始位置)
             crcCode_Byte.CopyTo(Packet, 0);
             packageType_Byte.CopyTo(Packet, 4);
             encryptionType_Byte.CopyTo(Packet, 6);
             bodyLength.CopyTo(Packet, 8);
+            data_Byte.CopyTo(Packet, 12);
 
             return Packet;
         }
@@ -68,7 +70,6 @@ namespace Network.Packet {
                 throw new Exception($"{target.RemoteEndPoint}： 已斷線");
             }
         }
-
     }
 
     /// <summary>
@@ -132,8 +133,25 @@ namespace Network.Packet {
 
         #endregion
 
-        
+
         #region Body
+
+        #region 測試
+        //解封head
+        public byte[] UpPackHead(byte[] Packet) {
+            byte[] Temp_Byte = new byte[12];
+            Array.Copy(Packet, 0, Temp_Byte, 0, 12);
+            return Temp_Byte;
+        }
+
+        //解封Body
+        public byte[] UpPackBody(byte[] Packet, int Length) {
+            byte[] Temp_Byte = new byte[Length];
+            Array.Copy(Packet, Packet.Length - Length, Temp_Byte, 0, Length);
+            return Temp_Byte;
+        }
+        #endregion
+
 
         /// <summary>
         /// Body內容的資料轉成原有的型態
@@ -141,10 +159,7 @@ namespace Network.Packet {
         /// <param name="body"></param>
         /// <returns></returns>
         public int BodyIntData(byte[] body) {
-            byte[] data_Byte = new byte[4];          //陣列宣告的方法，宣告一個4byte的陣列
-            Array.Copy(body, 0, data_Byte, 0, data_Byte.Length);
-            int Data = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(data_Byte, 0));   //Byte->int
-
+            int Data = BitConverter.ToInt32(body, 0);
             return Data;
         }
         #endregion
