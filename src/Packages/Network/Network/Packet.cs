@@ -4,6 +4,9 @@ using System.Net.Sockets;
 
 namespace Network.Packet {
 
+    /// <summary>
+    /// 發送封包
+    /// </summary>
     public class Send {
 
         /// <summary>
@@ -19,7 +22,7 @@ namespace Network.Packet {
         }
 
         /// <summary>
-        /// 封裝
+        /// 封裝成二進位
         /// </summary>
         /// <param name="crcCode">封包驗證碼</param>
         /// <param name="packageType">封包型態</param>
@@ -67,12 +70,17 @@ namespace Network.Packet {
     }
 
     /// <summary>
-    /// 解封包
+    /// 收到二進位解封包
     /// </summary>
     public class UnPack {
 
         #region Head
 
+        /// <summary>
+        /// 封包的頭之CrcCode還原
+        /// </summary>
+        /// <param name="head">創造一個byte[]名為head</param>
+        /// <returns>回傳解析後的內容</returns>
         public int HeadCrcCode(byte[] head) {
             byte[] Int_Byte = new byte[4];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 0, Int_Byte, 0, 4);    //Array系統自帶的類別，將head從0開始複製至Int_Byte的0~4格
@@ -81,6 +89,11 @@ namespace Network.Packet {
             return CrcCode;
         }
 
+        /// <summary>
+        /// 封包的頭之Package還原
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
         public PackageType HeadPackageType(byte[] head) {
             byte[] PackageType_Byte = new byte[2];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 4, PackageType_Byte, 0, 2);
@@ -89,6 +102,11 @@ namespace Network.Packet {
             return (PackageType)PackageType;
         }
 
+        /// <summary>
+        /// 封包的頭之Encryption還原
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
         public EncryptionType HeadEncryptionType(byte[] head) {
             byte[] EncryptionType_Byte = new byte[2];      //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 6, EncryptionType_Byte, 0, 2);
@@ -96,7 +114,12 @@ namespace Network.Packet {
 
             return (EncryptionType)EncryptionType;
         }
-        
+
+        /// <summary>
+        /// 封包的頭之Body長度
+        /// /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
         public int HeadBodyLength(byte[] head) {
             byte[] BodyLength_Byte = new byte[4];
             Array.Copy(head, 8, BodyLength_Byte, 0, 4);
@@ -107,8 +130,14 @@ namespace Network.Packet {
 
         #endregion
 
+        
         #region Body
 
+        /// <summary>
+        /// Body內容的資料轉成原有的型態
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         public int BodyIntData(byte[] body) {
             byte[] data_Byte = new byte[4];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(body, 0, data_Byte, 0, data_Byte.Length);
