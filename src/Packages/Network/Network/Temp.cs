@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Sockets;
 
 namespace Network.Packet {
 
@@ -27,7 +28,8 @@ namespace Network.Packet {
         //User的屬性{get; set;}
         public int crcCode { get; set; }
         public EncryptionType encryptionType { get; set; }
-    
+        public Socket socket { get; set; }
+
 	}
 
 
