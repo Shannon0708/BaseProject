@@ -40,12 +40,12 @@ namespace Network.Packet {
         /// <param name="data_Byte">封包資料主體內容</param>
         /// <returns>回傳封裝完畢的封包</returns>
         private byte[] Build_Package(int crcCode, PackageType packageType, EncryptionType encryptionType, byte[] data_Byte) {
-            
+
             //using System有:BitConverter GetBytes
             //using System.Net有:IPAddress HostToNetworkOrder把後面括號內的參數轉換成網路格式
-            byte[] crcCode_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder(crcCode));             
+            byte[] crcCode_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder(crcCode));
             byte[] packageType_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((short)packageType));              //(short)強制將後面參數轉成短整數
-            byte[] encryptionType_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((short)encryptionType));       
+            byte[] encryptionType_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((short)encryptionType));
             byte[] bodyLength = BitConverter.GetBytes(IPAddress.HostToNetworkOrder(data_Byte.Length));
 
             byte[] Packet = new byte[12 + data_Byte.Length];    //封包 Head長度 加 Body長度
@@ -72,7 +72,7 @@ namespace Network.Packet {
                 try {
                     //發送資料給目標Send(封包, 長度, 起始位置)
                     target.Send(Packet, Packet.Length, 0);
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     Console.WriteLine($"封包發送失敗： {ex.Message}");
                 }
             } else {
@@ -172,6 +172,12 @@ namespace Network.Packet {
         }
         #endregion
 
+    }
+
+    public class Test {
+        public void Dll() {
+            Console.WriteLine("Test Dll");
+        }
     }
 
 }
