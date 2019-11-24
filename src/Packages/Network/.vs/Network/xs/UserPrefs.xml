@@ -8,7 +8,9 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Network" expanded="True">
-            <Node name="Network" selected="True" />
+            <Node name="Network" expanded="True">
+              <Node name="Packet.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
