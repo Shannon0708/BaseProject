@@ -24,7 +24,7 @@ namespace LearnHub_Server {
             //Server.Start(); //啟動服務器
             //Console.WriteLine("正在啟動服務器...\n");
 
-            //Console.ReadKey();  //避免閃退
+            Console.ReadKey();  //避免閃退
             //Console.WriteLine("#  Server is Close");
 
         }
