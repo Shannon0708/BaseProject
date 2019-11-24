@@ -34,6 +34,10 @@ namespace LearnHub_Server {
         private static void Initial() {
             Server = new Server();
             //Server
+
+            //Dll測試
+            //Network.Packet.Dll dll = new Network.Packet.Dll();
+            //dll.Test();
         }
     }
 }
