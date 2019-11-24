@@ -1,17 +1,13 @@
-﻿<Properties StartupConfiguration="{E27E22D6-BB69-44F9-A48C-68A11BABABDA}|Default">
+﻿<Properties StartupConfiguration="{04653B92-DED7-4DBD-9992-D653D603319C}|Default">
   <MonoDevelop.Ide.ItemProperties.LearnHub__Server FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Start.cs">
     <Files>
-      <File FileName="LearnHub_Server/Start.cs" Line="39" Column="2" />
+      <File FileName="LearnHub_Server/Start.cs" Line="43" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LearnHub_Server" expanded="True">
-            <Node name="LearnHub_Server" expanded="True">
-              <Node name="Start.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="LearnHub_Server" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
