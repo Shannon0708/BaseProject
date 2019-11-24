@@ -1,8 +1,8 @@
-﻿<Properties StartupConfiguration="{3EBBFCEB-C708-4455-84A5-E17F3F425762}|Default">
+﻿<Properties StartupConfiguration="{04653B92-DED7-4DBD-9992-D653D603319C}|Default">
   <MonoDevelop.Ide.ItemProperties.LearnHub__Server PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Start.cs">
     <Files>
-      <File FileName="LearnHub_Server/Start.cs" Line="42" Column="6" />
+      <File FileName="LearnHub_Server/Start.cs" Line="40" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
