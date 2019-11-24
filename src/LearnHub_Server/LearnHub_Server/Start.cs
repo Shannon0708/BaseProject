@@ -20,7 +20,7 @@ namespace LearnHub_Server {
             Initial();  //主程式初始化
 
             //設定服務器
-            Server.Start(); //啟動服務器
+            //Server.Start(); //啟動服務器
             Console.WriteLine("正在啟動服務器...\n");
 
             Console.ReadKey();  //避免閃退
@@ -34,6 +34,10 @@ namespace LearnHub_Server {
         private static void Initial() {
             Server = new Server();
             //Server
+
+            //Dll測試
+            Network.Packet.Test test = new Network.Packet.Test();
+            test.Dll();
         }
     }
 }

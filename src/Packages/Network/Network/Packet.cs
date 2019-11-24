@@ -174,4 +174,10 @@ namespace Network.Packet {
 
     }
 
+    public class Test {
+        public void Dll() {
+            Console.WriteLine("Test Dll");
+        }
+    }
+
 }
