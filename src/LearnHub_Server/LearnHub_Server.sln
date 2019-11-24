@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnHub_Server", "LearnHub_Server\LearnHub_Server.csproj", "{04653B92-DED7-4DBD-9992-D653D603319C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnHub_Server", "LearnHub_Server\LearnHub_Server.csproj", "{08D4D66E-65AE-48FF-A979-724D62FC15E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +9,9 @@ Global
 		Release|anycpu = Release|anycpu
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{04653B92-DED7-4DBD-9992-D653D603319C}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{04653B92-DED7-4DBD-9992-D653D603319C}.Debug|anycpu.Build.0 = Debug|anycpu
-		{04653B92-DED7-4DBD-9992-D653D603319C}.Release|anycpu.ActiveCfg = Release|anycpu
-		{04653B92-DED7-4DBD-9992-D653D603319C}.Release|anycpu.Build.0 = Release|anycpu
+		{08D4D66E-65AE-48FF-A979-724D62FC15E9}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{08D4D66E-65AE-48FF-A979-724D62FC15E9}.Debug|anycpu.Build.0 = Debug|anycpu
+		{08D4D66E-65AE-48FF-A979-724D62FC15E9}.Release|anycpu.ActiveCfg = Release|anycpu
+		{08D4D66E-65AE-48FF-A979-724D62FC15E9}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 EndGlobal

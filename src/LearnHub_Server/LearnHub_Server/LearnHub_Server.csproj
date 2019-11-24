@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
-    <ProjectGuid>{04653B92-DED7-4DBD-9992-D653D603319C}</ProjectGuid>
+    <ProjectGuid>{08D4D66E-65AE-48FF-A979-724D62FC15E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>LearnHub_Server</RootNamespace>
     <AssemblyName>LearnHub_Server</AssemblyName>
@@ -28,16 +28,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Network">
-      <HintPath>..\..\Packages\Network\Network\obj\Debug\Network.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Setup.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Example.cs" />
-    <Compile Include="Server.cs" />
-    <Compile Include="Example.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
