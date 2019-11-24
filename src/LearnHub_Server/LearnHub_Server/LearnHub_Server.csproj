@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
-    <ProjectGuid>{3EBBFCEB-C708-4455-84A5-E17F3F425762}</ProjectGuid>
+    <ProjectGuid>{E27E22D6-BB69-44F9-A48C-68A11BABABDA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>LearnHub_Server</RootNamespace>
     <AssemblyName>LearnHub_Server</AssemblyName>
@@ -34,10 +34,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Start.cs" />
+    <Compile Include="Example.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Example.cs" />
+    <Compile Include="Start.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

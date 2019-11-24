@@ -28,6 +28,6 @@ namespace Network.Packet {
         public EncryptionType EncryptionType { get; set; }
         public Socket Socket { get; set; }
 
-	}
+    }
 
 }
