@@ -29,7 +29,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Network">
-      <HintPath>..\..\Packages\Network\Network\bin\Debug\netstandard2.1\Network.dll</HintPath>
+      <HintPath>..\..\Packages\Network\Network\obj\Debug\Network.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
