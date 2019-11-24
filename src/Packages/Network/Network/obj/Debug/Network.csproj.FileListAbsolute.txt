@@ -1,0 +1,5 @@
+/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/bin/Debug/Network.dll
+/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/bin/Debug/Network.pdb
+/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.csprojAssemblyReference.cache
+/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.dll
+/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.pdb
