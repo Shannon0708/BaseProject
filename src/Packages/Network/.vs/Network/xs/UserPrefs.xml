@@ -10,6 +10,7 @@
           <Node name="Network" expanded="True" selected="True">
             <Node name="Network" expanded="True">
               <Node name="Dependencies" expanded="True" />
+              <Node name="Packet.cs" selected="True" />
             </Node>
           </Node>
         </State>
