@@ -7,8 +7,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LearnHub_Server" expanded="True" selected="True">
-            <Node name="LearnHub_Server" expanded="True" />
+          <Node name="LearnHub_Server" expanded="True">
+            <Node name="LearnHub_Server" expanded="True">
+              <Node name="Start.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
