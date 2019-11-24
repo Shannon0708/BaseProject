@@ -1,4 +1,5 @@
 ﻿using System;
+using Network.Packet;
 
 //版本1.1.02
 namespace LearnHub_Server {
@@ -20,11 +21,11 @@ namespace LearnHub_Server {
             Initial();  //主程式初始化
 
             //設定服務器
-            Server.Start(); //啟動服務器
-            Console.WriteLine("正在啟動服務器...\n");
+            //Server.Start(); //啟動服務器
+            //Console.WriteLine("正在啟動服務器...\n");
 
-            Console.ReadKey();  //避免閃退
-            Console.WriteLine("#  Server is Close");
+            //Console.ReadKey();  //避免閃退
+            //Console.WriteLine("#  Server is Close");
 
         }
 
@@ -32,7 +33,10 @@ namespace LearnHub_Server {
         /// 初始化
         /// </summary>
         private static void Initial() {
-            Server = new Server();
+            //Server = new Server();
+
+            Dll dll = new Dll();
+            dll.Test();
         }
     }
 }

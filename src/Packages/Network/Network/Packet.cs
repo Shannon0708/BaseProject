@@ -174,4 +174,16 @@ namespace Network.Packet {
 
     }
 
+
+    /// <summary>
+    /// Dll測試類
+    /// </summary>
+    public class Dll {
+
+        public void Test() {
+            Console.WriteLine("Dll Test!");
+        }
+
+    }
+
 }
