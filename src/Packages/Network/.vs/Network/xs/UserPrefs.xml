@@ -1,5 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Network/Packet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Network/Temp.cs">
     <Files>
       <File FileName="Network/Packet.cs" Line="179" Column="40" />
       <File FileName="Network/Temp.cs" Line="34" Column="1" NotebookId="1" />
@@ -7,8 +7,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Network" expanded="True" selected="True">
-            <Node name="Network" expanded="True" />
+          <Node name="Network" expanded="True">
+            <Node name="Network" expanded="True">
+              <Node name="Temp.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
