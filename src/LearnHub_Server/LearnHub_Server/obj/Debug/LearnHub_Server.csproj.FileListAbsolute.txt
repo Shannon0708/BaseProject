@@ -6,3 +6,11 @@
 /Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.csproj.CopyComplete
 /Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.exe
 /Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.pdb
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\bin\Debug\LearnHub_Server.exe
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\bin\Debug\LearnHub_Server.pdb
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\bin\Debug\Network.dll
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\bin\Debug\Network.pdb
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\obj\Debug\LearnHub_Server.csprojAssemblyReference.cache
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\obj\Debug\LearnHub_Server.csproj.CopyComplete
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\obj\Debug\LearnHub_Server.exe
+D:\桌面\軟工\BaseProject\src\LearnHub_Server\LearnHub_Server\obj\Debug\LearnHub_Server.pdb
