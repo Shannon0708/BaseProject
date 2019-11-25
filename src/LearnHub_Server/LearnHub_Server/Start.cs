@@ -1,7 +1,7 @@
 ﻿using System;
 using Network.Packet;
 
-//版本1.1.02
+//版本1.1.03
 namespace LearnHub_Server {
 
     /// <summary>
@@ -33,10 +33,12 @@ namespace LearnHub_Server {
         /// 初始化
         /// </summary>
         private static void Initial() {
-            //Server = new Server();
+            Server = new Server();
+            //Server
 
-            Dll dll = new Dll();
-            dll.Test();
+            //Dll測試
+            var test = new Test();
+            test.Dll();
         }
     }
 }
