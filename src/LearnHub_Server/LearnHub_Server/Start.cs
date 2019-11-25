@@ -37,7 +37,7 @@ namespace LearnHub_Server {
             //Server
 
             //Dll測試
-            Network.Packet.Test test = new Network.Packet.Test();
+            var test = new Test();
             test.Dll();
         }
     }
