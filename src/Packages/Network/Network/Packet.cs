@@ -11,14 +11,86 @@ namespace Network.Packet {
 
         #region 各類型態 轉換成 Byte[]樣式
         /// <summary>
-        /// 創造int封包，把int變成二進位(byte)丟給BuildPackage打包
+        /// 創造int封包，把int轉成二進位(byte)丟給BuildPackage打包
         /// </summary>
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
         public void IntPacket(User user, PackageType packageType, int data) {
 
-            //將整數型data 轉換成 字節陣列 data_Byte
+            //將整數型data 轉換成 字節(二進位)陣列 data_Byte
+            byte[] data_Byte = BitConverter.GetBytes(data);
+
+            //封裝封包(封包驗證碼, 封包型態, 封包加密方法, 封包內容)
+            byte[] Packet = Build_Package(user.CrcCode, packageType, user.EncryptionType, data_Byte);
+
+            //發送封包(發送目標, 發送內容)
+            Send_Packet(user.Socket, Packet);
+        }
+
+        /// <summary>
+        /// 創造float封包，把float轉成二進位(byte)丟給BuildPackage打包
+        /// </summary>
+        /// <param name="user">要發給誰</param>
+        /// <param name="packageType">封包型態，發過去要幹嘛</param>
+        /// <param name="data">要發送封包的內容</param>
+        public void FloatPacket(User user, PackageType packageType, float data) {
+
+            //將浮點數型data 轉換成 字節(二進位)陣列 data_Byte
+            byte[] data_Byte = BitConverter.GetBytes(data);
+
+            //封裝封包(封包驗證碼, 封包型態, 封包加密方法, 封包內容)
+            byte[] Packet = Build_Package(user.CrcCode, packageType, user.EncryptionType, data_Byte);
+
+            //發送封包(發送目標, 發送內容)
+            Send_Packet(user.Socket, Packet);
+        }
+
+        /// <summary>
+        /// 創建bool封包，把bool轉成二進位(byte)丟給BuildPackage打包
+        /// </summary>
+        /// <param name="user">要發給誰</param>
+        /// <param name="packageType">封包型態，發過去要幹嘛</param>
+        /// <param name="data">要發送封包的內容</param>
+        public void BoolPacket(User user, PackageType packageType, bool data) {
+
+            //將布林型data 轉換成 字節(二進位)陣列 data_Byte
+            byte[] data_Byte = BitConverter.GetBytes(data);
+
+            //封裝封包(封包驗證碼, 封包型態, 封包加密方法, 封包內容)
+            byte[] Packet = Build_Package(user.CrcCode, packageType, user.EncryptionType, data_Byte);
+
+            //發送封包(發送目標, 發送內容)
+            Send_Packet(user.Socket, Packet);
+        }
+
+        /// <summary>
+        /// 創建long封包，把long轉成二進位(byte)丟給BuildPackage打包
+        /// </summary>
+        /// <param name="user">要發給誰</param>
+        /// <param name="packageType">封包型態，發過去要幹嘛</param>
+        /// <param name="data">要發送封包的內容</param>
+        public void LongPacket(User user, PackageType packageType, long data) {
+
+            //將長整數型data 轉換成 字節(二進位)陣列 data_Byte
+            byte[] data_Byte = BitConverter.GetBytes(data);
+
+            //封裝封包(封包驗證碼, 封包型態, 封包加密方法, 封包內容)
+            byte[] Packet = Build_Package(user.CrcCode, packageType, user.EncryptionType, data_Byte);
+
+            //發送封包(發送目標, 發送內容)
+            Send_Packet(user.Socket, Packet);
+        }
+
+        /// <summary>
+        /// 創建short封包，把short轉成二進位(byte)丟給BuildPackage打包
+        /// </summary>
+        /// <param name="user">要發給誰</param>
+        /// <param name="packageType">封包型態，發過去要幹嘛</param>
+        /// <param name="data">要發送封包的內容</param>
+        public void ShortPacket(User user, PackageType packageType, long data) {
+
+            //將短整數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
 
             //封裝封包(封包驗證碼, 封包型態, 封包加密方法, 封包內容)
@@ -104,8 +176,8 @@ namespace Network.Packet {
         /// <summary>
         /// 封包的頭之Package還原
         /// </summary>
-        /// <param name="head"></param>
-        /// <returns></returns>
+        /// <param name="head">創造一個byte[]名為head</param>
+        /// <returns>回傳解析後的內容</returns>
         public PackageType Head_PackageType(byte[] head) {
             byte[] PackageType_Byte = new byte[2];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 4, PackageType_Byte, 0, 2);
@@ -117,8 +189,8 @@ namespace Network.Packet {
         /// <summary>
         /// 封包的頭之Encryption還原
         /// </summary>
-        /// <param name="head"></param>
-        /// <returns></returns>
+        /// <param name="head">創造一個byte[]名為head</param>
+        /// <returns>回傳解析後的內容</returns>
         public EncryptionType Head_EncryptionType(byte[] head) {
             byte[] EncryptionType_Byte = new byte[2];      //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 6, EncryptionType_Byte, 0, 2);
@@ -130,8 +202,8 @@ namespace Network.Packet {
         /// <summary>
         /// 封包的頭之Body長度
         /// /// </summary>
-        /// <param name="head"></param>
-        /// <returns></returns>
+        /// <param name="head">創造一個byte[]名為head</param>
+        /// <returns>回傳解析後的內容</returns>
         public int Head_BodyLength(byte[] head) {
             byte[] BodyLength_Byte = new byte[4];
             Array.Copy(head, 8, BodyLength_Byte, 0, 4);
@@ -141,15 +213,42 @@ namespace Network.Packet {
         }
         #endregion
 
-
         #region Body 封包實際內容
         /// <summary>
         /// Body內容的資料轉成原有的型態
         /// </summary>
         /// <param name="body"></param>
-        /// <returns></returns>
+        /// <returns>原始資料</returns>
+        //BitConverter是System裡的class
+        //ToInt是其中的方法(位元組陣列, 起始位置)
+
+        //將原傳送內文為int的資料還原
         public int Body_IntData(byte[] body) {
             int Data = BitConverter.ToInt32(body, 0);
+            return Data;
+        }
+
+        //將原傳送內文為float的資料還原
+        public float Body_FloatData(byte[] body) {
+            float Data = BitConverter.ToSingle(body, 0);
+            return Data;
+        }
+
+        //將原傳送內文為bool的資料還原
+        public bool Body_BoolData(byte[] body) {
+            bool Data = BitConverter.ToBoolean(body, 0);
+            return Data;
+        }
+
+        //將原傳送內文為long的資料還原
+        public long Body_LongData(byte[] body) {
+            long Data = BitConverter.ToInt64(body, 0);
+            return Data;
+        }
+
+        //將原傳送內文為short的資料還原
+        public short Body_ShortData(byte[] body) {
+            short Data = BitConverter.ToInt16(body, 0);
             return Data;
         }
 
