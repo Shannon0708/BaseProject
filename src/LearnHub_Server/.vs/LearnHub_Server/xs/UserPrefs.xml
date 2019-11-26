@@ -7,9 +7,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LearnHub_Server" expanded="True" selected="True">
-            <Node name="LearnHub_Server" expanded="True" />
-          </Node>
+          <Node name="LearnHub_Server" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
