@@ -6,6 +6,10 @@ using Data;
 
 namespace Network.Packet {
 
+    public interface IBuildPackage {
+        byte[] Build_Package(int crcCode, PackageType packageType, EncryptionType encryptionType, byte[] data_Byte);
+    }
+
     /// <summary>
     /// 發送封包
     /// </summary>
@@ -19,7 +23,7 @@ namespace Network.Packet {
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
         public void IntPacket(User user, PackageType packageType, int data) {
-
+            
             //將整數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
 
@@ -90,7 +94,7 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
-        public void ShortPacket(User user, PackageType packageType, long data) {
+        public void ShortPacket(User user, PackageType packageType, short data) {
 
             //將短整數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
@@ -101,7 +105,6 @@ namespace Network.Packet {
             //發送封包(發送目標, 發送內容)
             Send_Packet(user.Socket, Packet);
         }
-
         #endregion
 
         #region 封裝 及 發送封包
@@ -155,6 +158,12 @@ namespace Network.Packet {
         }
         #endregion
     }
+
+
+    public class TypeConverter {
+        
+    }
+
 
     /// <summary>
     /// 收到二進位解封包
@@ -274,6 +283,11 @@ namespace Network.Packet {
         #endregion
 
     }
+
+
+
+
+
 
     public class Test {
         public void Dll() {

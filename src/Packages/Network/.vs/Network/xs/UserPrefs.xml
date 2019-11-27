@@ -1,22 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Data/Data/UserData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Data/Data/DataType.cs">
     <Files>
-      <File FileName="Network/Packet.cs" Line="6" Column="1" />
-      <File FileName="Network/Temp.cs" Line="9" Column="1" />
-      <File FileName="../DataBuff/DataBuff/DataBuff/Class1.cs" Line="25" Column="1" NotebookId="1" />
-      <File FileName="../Data/Data/UserData.cs" Line="24" Column="1" NotebookId="1" />
-      <File FileName="../Data/Data/DataType.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Network/Packet.cs" Line="25" Column="77" />
+      <File FileName="../Data/Data/DataType.cs" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Network" expanded="True">
             <Node name="Data" expanded="True">
-              <Node name="UserData.cs" selected="True" />
+              <Node name="DataType.cs" selected="True" />
             </Node>
-            <Node name="Network" expanded="True">
-              <Node name="References" expanded="True" />
-            </Node>
+            <Node name="Network" expanded="True" />
           </Node>
         </State>
       </Pad>

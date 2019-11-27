@@ -17,4 +17,8 @@ namespace Data {
         RES256
     }
 
+    public enum DatabaseType {
+        None
+    }
+
 }

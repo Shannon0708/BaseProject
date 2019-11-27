@@ -1,27 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
 
+using Data;
+
 namespace LearnHub_Server {
-
-    //封包註冊接口
-    public interface IPacketRegister {
-        void PK_Register();
-    }
-
-    //資料庫註冊接口
-    public interface IDatabaseRegister {
-        void DB_Register();
-    }
-
-    //在線接口
-    public interface IOnline {
-        void Offline();
-    }
 
     /// <summary>
     /// 服務器基礎抽象類
     /// </summary>
-    public abstract class BaseServer : IPacketRegister, IDatabaseRegister {
+    public abstract class BaseServer {
 
         /// <summary>
         /// 服務器初始化方法
@@ -56,11 +44,6 @@ namespace LearnHub_Server {
         protected abstract void PacketCallBackThread();
 
         //其他線程
-        #endregion
-
-        #region 接口實現
-        public abstract void PK_Register();
-        public abstract void DB_Register();
         #endregion
     }
 
