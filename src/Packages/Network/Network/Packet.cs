@@ -2,6 +2,8 @@
 using System.Net;
 using System.Net.Sockets;
 
+using Data;
+
 namespace Network.Packet {
 
     /// <summary>

@@ -33,12 +33,13 @@ namespace LearnHub_Server {
         /// 初始化
         /// </summary>
         private static void Initial() {
-            Server = new Server();
+            //Server = new Server();
             //Server
 
             //Dll測試
             var test = new Test();
             test.Dll();
+
         }
     }
 }
