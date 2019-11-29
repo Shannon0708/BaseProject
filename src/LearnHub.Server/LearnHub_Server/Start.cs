@@ -37,9 +37,11 @@ namespace LearnHub_Server {
             //Server
 
             //Dll測試
-            var test = new Test();
-            test.Dll();
+            //var test = new Test();
+            //test.Dll();
 
+            //功能測試
+            var server = new Server(true);
         }
     }
 }

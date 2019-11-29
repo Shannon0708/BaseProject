@@ -16,101 +16,6 @@ using Data;
 
 namespace LearnHub_Server {
 
-    #region 註冊
-    /// <summary>
-    /// 註冊類
-    /// </summary>
-    public class Register {
-        private IRegister register;
-
-        /// <summary>
-        /// Instance
-        /// </summary>
-        /// <param name="register">註冊接口</param>
-        public Register(IRegister register) {
-            this.register = register;
-        }
-
-        /// <summary>
-        /// 執行
-        /// </summary>
-        /// <typeparam name="T">泛用型態：判斷封包型態or資料庫型態</typeparam>
-        /// <param name="packetType">型態傳入</param>
-        /// <param name="callBackEventHandler">委派</param>
-        public void Execute<T>(ref T packetType, IRegister.CallBackEventHandler callBackEventHandler) {
-            register.Register(ref packetType, callBackEventHandler);
-        }
-
-    }
-
-    /// <summary>
-    /// 註冊接口
-    /// </summary>
-    public interface IRegister {
-        delegate void CallBackEventHandler(User client, byte[] Head, byte[] Body);
-        void Register<T>(ref T packetType, CallBackEventHandler callBackEventHandler);
-    }
-
-    /// <summary>
-    /// 封包型態註冊
-    /// </summary>
-    public class PacketType : IRegister {
-
-        private static Dictionary<PackageType, IRegister.CallBackEventHandler> CallBacksDictionary;
-
-        /// <summary>
-        /// Instance
-        /// </summary>
-        public PacketType() {
-            CallBacksDictionary = new Dictionary<PackageType, IRegister.CallBackEventHandler>();
-        }
-
-        /// <summary>
-        /// 註冊方法
-        /// </summary>
-        public void Register<T>(ref T packetType, IRegister.CallBackEventHandler callBackEventHandler) {
-
-            object Type = packetType;
-            var packageType = (PackageType)Type;
-
-            if (!CallBacksDictionary.ContainsKey(packageType))
-                CallBacksDictionary.Add(packageType, callBackEventHandler);
-            else
-                Console.WriteLine("# Warning: 封包註冊了相同的回調事件");
-        }
-    }
-
-    /// <summary>
-    /// 資料庫型態註冊
-    /// </summary>
-    public class DatabaseType : IRegister {
-
-        private static Dictionary<DatabaseType, IRegister.CallBackEventHandler> CallBacksDictionary;
-
-        /// <summary>
-        /// Instance
-        /// </summary>
-        public DatabaseType() {
-            CallBacksDictionary = new Dictionary<DatabaseType, IRegister.CallBackEventHandler>();
-        }
-
-        /// <summary>
-        /// 註冊方法
-        /// </summary>
-        public void Register<T>(ref T packetType, IRegister.CallBackEventHandler callBackEventHandler) {
-
-            object Type = packetType;
-            var databaseType = (DatabaseType)Type;
-
-            if (!CallBacksDictionary.ContainsKey(databaseType))
-                CallBacksDictionary.Add(databaseType, callBackEventHandler);
-            else
-                Console.WriteLine("# Warning: 資料庫註冊了相同的回調事件");
-        }
-    }
-    #endregion
-
-
     public class Server : BaseServer {
 
         public static List<User> Users;                                     //玩家集合宣告
@@ -124,8 +29,12 @@ namespace LearnHub_Server {
             ServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp); //創建Socket
         }
 
-        public Server(bool Test) {
+        public Server(bool Testing) {
             Console.WriteLine("服務器功能測試...");
+
+
+            var packageTypeRegister = new Register(new PackageTypeRegister());
+            packageTypeRegister.Add(PackageType.Test, Test);
 
         }
 
@@ -203,6 +112,11 @@ namespace LearnHub_Server {
             throw new NotImplementedException();
         }
 
+
+
+        private static void Test(User client, byte[] Head, byte[] Body) {
+            Console.WriteLine("Register Test method");
+        }
     }
 
 }

@@ -1,27 +1,26 @@
 ﻿<Properties StartupConfiguration="{1A206AED-AACD-44CF-B380-5DDEAAD9F463}|Default">
-  <MonoDevelop.Ide.ItemProperties.LearnHub__Server PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Server/Server.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Register.cs">
     <Files>
-      <File FileName="LearnHub_Server/Server/BaseServer.cs" Line="99" Column="15" />
-      <File FileName="LearnHub_Server/Server/Server.cs" Line="19" Column="1" NotebookId="1" />
-      <File FileName="LearnHub_Server/Start.cs" Line="46" Column="1" NotebookId="1" />
+      <File FileName="LearnHub_Server/Server/BaseServer.cs" Line="7" Column="26" />
+      <File FileName="LearnHub_Server/Register.cs" Line="21" Column="10" />
+      <File FileName="LearnHub_Server/Server/Server.cs" Line="44" Column="42" NotebookId="1" />
+      <File FileName="LearnHub_Server/Start.cs" NotebookId="1" />
       <File FileName="LearnHub_Server/Setup.cs" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LearnHub_Server" expanded="True">
-            <Node name="LearnHub_Server" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Server" expanded="True">
-                <Node name="Server.cs" selected="True" />
-              </Node>
+            <Node name="LearnHub.Server" expanded="True">
+              <Node name="Server" expanded="True" />
+              <Node name="Register.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LearnHub.Server PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

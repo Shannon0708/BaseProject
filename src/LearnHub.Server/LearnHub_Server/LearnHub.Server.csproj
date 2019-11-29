@@ -8,6 +8,7 @@
     <RootNamespace>LearnHub_Server</RootNamespace>
     <AssemblyName>LearnHub_Server</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <Compile Include="Server\BaseServer.cs" />
     <Compile Include="Server\LearnHubServer.cs" />
     <Compile Include="Server\Server.cs" />
+    <Compile Include="Register.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Server\" />
