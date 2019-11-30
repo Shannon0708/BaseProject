@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Register.cs">
     <Files>
       <File FileName="LearnHub_Server/Server/BaseServer.cs" Line="7" Column="26" />
-      <File FileName="LearnHub_Server/Register.cs" Line="21" Column="10" />
-      <File FileName="LearnHub_Server/Server/Server.cs" Line="44" Column="42" NotebookId="1" />
+      <File FileName="LearnHub_Server/Register.cs" Line="8" Column="1" />
+      <File FileName="LearnHub_Server/Server/Server.cs" Line="36" Column="52" NotebookId="1" />
       <File FileName="LearnHub_Server/Start.cs" NotebookId="1" />
       <File FileName="LearnHub_Server/Setup.cs" NotebookId="1" />
     </Files>

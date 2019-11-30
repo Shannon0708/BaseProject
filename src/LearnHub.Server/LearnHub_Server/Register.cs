@@ -2,51 +2,34 @@
 using System.Collections.Generic;
 using Data;
 
-namespace LearnHub_Server.Register {
+namespace LearnHub_Server {
 
     #region 註冊
 
     //Package   組件
     //Packet    封包
 
-    public delegate void PacketCallBackHandler(User client, byte[] Head, byte[] Body);
+    public delegate void CallBackHandler(User client, byte[] Head, byte[] Body);
 
     /// <summary>
     /// 註冊類
     /// </summary>
     public class Register {
 
-        
-
-        public Register() {
-            Dictionary<PackageType, PacketCallBackHandler> CallBacksDictionary = new Dictionary<PackageType, PacketCallBackHandler>();
-        }
-
-
-
+        private IRegister register;
 
         /// <summary>
-        /// 註冊 封包回調方法(靜態)
+        /// 
         /// </summary>
-        /// <param name="packageType">封包型態</param>
-        /// <param name="PK_CallBackMethod">封包回調方法</param>
-        public static void Register(PackageType packageType, ServerCallBack PK_CallBackMethod) {
-            if (!PK_CallBacksDictionary.ContainsKey(packageType))
-                PK_CallBacksDictionary.Add(packageType, PK_CallBackMethod);
-            else
-                Console.WriteLine("# Warning: 封包註冊了相同的回調事件");
+        public Register(IRegister register) {
+            this.register = register;
         }
 
         /// <summary>
-        /// 註冊 數據庫回調方法(靜態)
+        /// 註冊方法
         /// </summary>
-        /// <param name="dataBaseType">封包中關於數據庫行為型態</param>
-        /// <param name="DB_DataBaseCallBack">資料庫回調方法</param>
-        public static void Register(DataBaseType dataBaseType, DataBaseCallBack DB_DataBaseCallBack) {
-            if (!DB_CallBacksDictionary.ContainsKey(dataBaseType))
-                DB_CallBacksDictionary.Add(dataBaseType, DB_DataBaseCallBack);
-            else
-                Console.WriteLine("# Warning: 數據庫註冊了相同的回調事件");
+        public void Add<T>(T packetType, CallBackHandler callBackHandler) {
+            register.Register(packetType, callBackHandler);
         }
 
     }
@@ -58,7 +41,7 @@ namespace LearnHub_Server.Register {
     /// 註冊接口
     /// </summary>
     public interface IRegister {
-        void Register<T>(T packetType, CallBackEventHandler callBackEventHandler);
+        void Register<T>(T packetType, CallBackHandler callBackHandler);
     }
 
     /// <summary>
@@ -66,25 +49,25 @@ namespace LearnHub_Server.Register {
     /// </summary>
     public class PackageTypeRegister : IRegister {
 
-        private static Dictionary<PackageType, CallBackEventHandler> CallBacksDictionary;
+        private static Dictionary<PackageType, CallBackHandler> CallBacksDictionary;
 
         /// <summary>
         /// Instance
         /// </summary>
         public PackageTypeRegister() {
-            CallBacksDictionary = new Dictionary<PackageType, CallBackEventHandler>();
+            CallBacksDictionary = new Dictionary<PackageType, CallBackHandler>();
         }
 
         /// <summary>
         /// 註冊方法
         /// </summary>
-        public void Register<T>(T packetType, CallBackEventHandler callBackEventHandler) {
+        public void Register<T>(T packetType, CallBackHandler callBackHandler) {
 
             object Type = packetType;
             var packageType = (PackageType)Type;
 
             if (!CallBacksDictionary.ContainsKey(packageType)) {
-                CallBacksDictionary.Add(packageType, callBackEventHandler);
+                CallBacksDictionary.Add(packageType, callBackHandler);
                 Console.WriteLine("# 註冊成功");
             } else
                 Console.WriteLine("# Warning: 封包註冊了相同的回調事件");
@@ -96,25 +79,25 @@ namespace LearnHub_Server.Register {
     /// </summary>
     public class DatabaseTypeRegister : IRegister {
 
-        private static Dictionary<DatabaseType, CallBackEventHandler> CallBacksDictionary;
+        private static Dictionary<DatabaseType, CallBackHandler> CallBacksDictionary;
 
         /// <summary>
         /// Instance
         /// </summary>
         public DatabaseTypeRegister() {
-            CallBacksDictionary = new Dictionary<DatabaseType, CallBackEventHandler>();
+            CallBacksDictionary = new Dictionary<DatabaseType, CallBackHandler>();
         }
 
         /// <summary>
         /// 註冊方法
         /// </summary>
-        public void Register<T>(T packetType, CallBackEventHandler callBackEventHandler) {
+        public void Register<T>(T packetType, CallBackHandler callBackHandler) {
 
             object Type = packetType;
             var databaseType = (DatabaseType)Type;
 
             if (!CallBacksDictionary.ContainsKey(databaseType))
-                CallBacksDictionary.Add(databaseType, callBackEventHandler);
+                CallBacksDictionary.Add(databaseType, callBackHandler);
             else
                 Console.WriteLine("# Warning: 資料庫註冊了相同的回調事件");
         }
