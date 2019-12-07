@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{1A206AED-AACD-44CF-B380-5DDEAAD9F463}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Register.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Packages/Network/Network/Packet.cs">
     <Files>
-      <File FileName="LearnHub_Server/Server/BaseServer.cs" Line="7" Column="26" />
-      <File FileName="LearnHub_Server/Register.cs" Line="8" Column="1" />
-      <File FileName="LearnHub_Server/Server/Server.cs" Line="36" Column="52" NotebookId="1" />
-      <File FileName="LearnHub_Server/Start.cs" NotebookId="1" />
-      <File FileName="LearnHub_Server/Setup.cs" NotebookId="1" />
+      <File FileName="../Packages/Data/Data/DataType.cs" Line="6" Column="19" />
+      <File FileName="../Packages/Data/Data/UserData.cs" />
+      <File FileName="../Packages/Network/Network/Packet.cs" Line="10" Column="1" />
+      <File FileName="LearnHub_Server/Server/LearnHubServer.cs" />
+      <File FileName="../Packages/Network/Network/Setup.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,9 @@
           <Node name="LearnHub_Server" expanded="True">
             <Node name="LearnHub.Server" expanded="True">
               <Node name="Server" expanded="True" />
-              <Node name="Register.cs" selected="True" />
+            </Node>
+            <Node name="Network" expanded="True">
+              <Node name="Packet.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LearnHub_Server.Setup {
+﻿namespace LearnHub.Server.Setup {
 
     /// <summary>
     /// 服務器參數設定
@@ -19,7 +17,7 @@ namespace LearnHub_Server.Setup {
         public const string DATABASE_NAME = "DigDeeperGameDB";                         //數據庫名稱
         public const string DATABASE_PORT = "3306";                                    //連接端口
         public const string DATABASE_FORMAT = "utf8;";                                 //字型協議
-        private const string DATABASE_PASSWORD = "Waylon943734";                           //數據庫密碼 
+        public const string DATABASE_PASSWORD = "Waylon943734";                           //數據庫密碼 
 
 
     }

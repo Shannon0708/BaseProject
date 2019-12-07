@@ -1,8 +1,9 @@
 ﻿using System;
 using Network.Packet;
+using LearnHub.Server;
 
 //版本1.1.03
-namespace LearnHub_Server {
+namespace LearnHub {
 
     /// <summary>
     /// 項目入口
@@ -10,7 +11,7 @@ namespace LearnHub_Server {
     public class Start {
 
         #region 參考
-        public static Server Server;    //服務器物件參考
+        public static BuildServer Server;    //服務器物件參考
         #endregion
 
         /// <summary>
@@ -41,7 +42,6 @@ namespace LearnHub_Server {
             //test.Dll();
 
             //功能測試
-            var server = new Server(true);
         }
     }
 }

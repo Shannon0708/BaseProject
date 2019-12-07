@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
     <ProjectGuid>{1A206AED-AACD-44CF-B380-5DDEAAD9F463}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LearnHub_Server</RootNamespace>
+    <RootNamespace>LearnHub</RootNamespace>
     <AssemblyName>LearnHub_Server</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
@@ -43,11 +43,12 @@
     <Compile Include="Example.cs" />
     <Compile Include="Server\BaseServer.cs" />
     <Compile Include="Server\LearnHubServer.cs" />
-    <Compile Include="Server\Server.cs" />
-    <Compile Include="Register.cs" />
+    <Compile Include="Server\BuildServer.cs" />
+    <Compile Include="Utiliy\Register.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Server\" />
+    <Folder Include="Utiliy\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

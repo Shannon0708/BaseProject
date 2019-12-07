@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{766D9A0F-CF56-4939-9EC2-74056D68F8BB}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Data</RootNamespace>
+    <RootNamespace>LearnHub.Data</RootNamespace>
     <AssemblyName>Data</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>

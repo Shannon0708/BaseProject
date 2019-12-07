@@ -11,12 +11,12 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 
 //自定義 命名空間
-using LearnHub_Server.Setup;
-using Data;
+using LearnHub.Server.Setup;
+using LearnHub.Data;
 
-namespace LearnHub_Server {
+namespace LearnHub.Server {
 
-    public class Server : BaseServer {
+    public class BuildServer : BaseServer {
 
         public static List<User> Users;                                     //玩家集合宣告
 
@@ -25,17 +25,8 @@ namespace LearnHub_Server {
 
 
         //Instance
-        public Server() {
+        public BuildServer() {
             ServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp); //創建Socket
-        }
-
-        public Server(bool Testing) {
-            Console.WriteLine("服務器功能測試...");
-
-
-            var packageTypeRegister = new Register(new PackageTypeRegister());
-            packageTypeRegister.Add(PackageType.Test, Test);
-
         }
 
         /// <summary>
@@ -114,8 +105,15 @@ namespace LearnHub_Server {
 
 
 
+
+        //測試
+
         private static void Test(User client, byte[] Head, byte[] Body) {
-            Console.WriteLine("Register Test method");
+            Console.WriteLine("Packet Register Test method");
+        }
+
+        private static void DatabaseTest(User client, byte[] Head, byte[] Body) {
+            Console.WriteLine("Database Register Test method");
         }
     }
 

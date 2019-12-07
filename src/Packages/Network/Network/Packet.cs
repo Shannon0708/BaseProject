@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 
-using Data;
+using LearnHub.Data;
+using LearnHub.Netwrok.Setup;
 
 namespace Network.Packet {
-
-    public interface IBuildPackage {
-        byte[] Build_Package(int crcCode, PackageType packageType, EncryptionType encryptionType, byte[] data_Byte);
-    }
 
     /// <summary>
     /// 發送封包
     /// </summary>
-    public class Send {
+    public static class Send {
 
         #region 各類型態 轉換成 Byte[]樣式
         /// <summary>
@@ -22,7 +20,7 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
-        public void IntPacket(User user, PackageType packageType, int data) {
+        public static void IntPacket(User user, PackageType packageType, int data) {
             
             //將整數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
@@ -40,7 +38,7 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
-        public void FloatPacket(User user, PackageType packageType, float data) {
+        public static void FloatPacket(User user, PackageType packageType, float data) {
 
             //將浮點數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
@@ -58,7 +56,7 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
-        public void BoolPacket(User user, PackageType packageType, bool data) {
+        public static void BoolPacket(User user, PackageType packageType, bool data) {
 
             //將布林型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
@@ -76,7 +74,7 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
-        public void LongPacket(User user, PackageType packageType, long data) {
+        public static void LongPacket(User user, PackageType packageType, long data) {
 
             //將長整數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
@@ -94,7 +92,7 @@ namespace Network.Packet {
         /// <param name="user">要發給誰</param>
         /// <param name="packageType">封包型態，發過去要幹嘛</param>
         /// <param name="data">要發送封包的內容</param>
-        public void ShortPacket(User user, PackageType packageType, short data) {
+        public static void ShortPacket(User user, PackageType packageType, short data) {
 
             //將短整數型data 轉換成 字節(二進位)陣列 data_Byte
             byte[] data_Byte = BitConverter.GetBytes(data);
@@ -116,7 +114,7 @@ namespace Network.Packet {
         /// <param name="encryptionType">定義加密的方法</param>
         /// <param name="data_Byte">封包資料主體內容</param>
         /// <returns>回傳封裝完畢的封包</returns>
-        private byte[] Build_Package(int crcCode, PackageType packageType, EncryptionType encryptionType, byte[] data_Byte) {
+        private static byte[] Build_Package(int crcCode, PackageType packageType, EncryptionType encryptionType, byte[] data_Byte) {
 
             //using System有:BitConverter GetBytes
             //using System.Net有:IPAddress HostToNetworkOrder把後面括號內的參數轉換成網路格式
@@ -125,14 +123,14 @@ namespace Network.Packet {
             byte[] encryptionType_Byte = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((short)encryptionType));
             byte[] bodyLength = BitConverter.GetBytes(IPAddress.HostToNetworkOrder(data_Byte.Length));
 
-            byte[] Packet = new byte[12 + data_Byte.Length];    //封包 Head長度 加 Body長度
+            byte[] Packet = new byte[ParameterList.HEAD_LEN + data_Byte.Length];    //封包 Head長度 加 Body長度
 
             //CopyTo:把前面的內容複製到後面陣列的起始位置(陣列,起始位置)
-            crcCode_Byte.CopyTo(Packet, 0);
-            packageType_Byte.CopyTo(Packet, 4);
-            encryptionType_Byte.CopyTo(Packet, 6);
-            bodyLength.CopyTo(Packet, 8);
-            data_Byte.CopyTo(Packet, 12);
+            crcCode_Byte.CopyTo(Packet, ParameterList.CRC_Code_POS);
+            packageType_Byte.CopyTo(Packet, ParameterList.PACKAGE_Type_POS);
+            encryptionType_Byte.CopyTo(Packet, ParameterList.ENCRYPTION_TYPE_POS);
+            bodyLength.CopyTo(Packet, ParameterList.BODY_LENGTH_POS);
+            data_Byte.CopyTo(Packet, ParameterList.HEAD_LEN);
 
             return Packet;
         }
@@ -142,7 +140,7 @@ namespace Network.Packet {
         /// </summary>
         /// <param name="target">發送的目標</param>
         /// <param name="Packet">發送的內容</param>
-        private void Send_Packet(Socket target, byte[] Packet) {
+        private static void Send_Packet(Socket target, byte[] Packet) {
 
             //判斷發送目標是否處於連線狀態
             if (target.Connected) {
@@ -159,16 +157,10 @@ namespace Network.Packet {
         #endregion
     }
 
-
-    public class TypeConverter {
-        
-    }
-
-
     /// <summary>
-    /// 收到二進位解封包
+    /// 解析封包：收到二進位解封包
     /// </summary>
-    public class Unpack {
+    public static class Unpack {
 
         #region Head 封包自身資訊
         /// <summary>
@@ -176,7 +168,7 @@ namespace Network.Packet {
         /// </summary>
         /// <param name="head">創造一個byte[]名為head</param>
         /// <returns>回傳解析後的內容</returns>
-        public int Head_CrcCode(byte[] head) {
+        public static int Head_CrcCode(byte[] head) {
             byte[] Int_Byte = new byte[4];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 0, Int_Byte, 0, 4);    //Array系統自帶的類別，將head從0開始複製至Int_Byte的0~4格
             int CrcCode = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(Int_Byte, 0));   //Byte->int
@@ -189,7 +181,7 @@ namespace Network.Packet {
         /// </summary>
         /// <param name="head">創造一個byte[]名為head</param>
         /// <returns>回傳解析後的內容</returns>
-        public PackageType Head_PackageType(byte[] head) {
+        public static PackageType Head_PackageType(byte[] head) {
             byte[] PackageType_Byte = new byte[2];          //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 4, PackageType_Byte, 0, 2);
             short PackageType = IPAddress.NetworkToHostOrder(BitConverter.ToInt16(PackageType_Byte, 0));   //Byte->int
@@ -202,7 +194,7 @@ namespace Network.Packet {
         /// </summary>
         /// <param name="head">創造一個byte[]名為head</param>
         /// <returns>回傳解析後的內容</returns>
-        public EncryptionType Head_EncryptionType(byte[] head) {
+        public static EncryptionType Head_EncryptionType(byte[] head) {
             byte[] EncryptionType_Byte = new byte[2];      //陣列宣告的方法，宣告一個4byte的陣列
             Array.Copy(head, 6, EncryptionType_Byte, 0, 2);
             short EncryptionType = IPAddress.NetworkToHostOrder(BitConverter.ToInt16(EncryptionType_Byte, 0));   //Byte->int
@@ -215,7 +207,7 @@ namespace Network.Packet {
         /// /// </summary>
         /// <param name="head">創造一個byte[]名為head</param>
         /// <returns>回傳解析後的內容</returns>
-        public int Head_BodyLength(byte[] head) {
+        public static int Head_BodyLength(byte[] head) {
             byte[] BodyLength_Byte = new byte[4];
             Array.Copy(head, 8, BodyLength_Byte, 0, 4);
             int BodyLength = IPAddress.NetworkToHostOrder(BitConverter.ToInt32(BodyLength_Byte, 0));
@@ -234,65 +226,133 @@ namespace Network.Packet {
         //ToInt是其中的方法(位元組陣列, 起始位置)
 
         //將原傳送內文為int的資料還原
-        public int Body_IntData(byte[] body) {
+        public static int Body_IntData(byte[] body) {
             int Data = BitConverter.ToInt32(body, 0);
             return Data;
         }
 
         //將原傳送內文為float的資料還原
-        public float Body_FloatData(byte[] body) {
+        public static float Body_FloatData(byte[] body) {
             float Data = BitConverter.ToSingle(body, 0);
             return Data;
         }
 
         //將原傳送內文為bool的資料還原
-        public bool Body_BoolData(byte[] body) {
+        public static bool Body_BoolData(byte[] body) {
             bool Data = BitConverter.ToBoolean(body, 0);
             return Data;
         }
 
         //將原傳送內文為long的資料還原
-        public long Body_LongData(byte[] body) {
+        public static long Body_LongData(byte[] body) {
             long Data = BitConverter.ToInt64(body, 0);
             return Data;
         }
 
         //將原傳送內文為short的資料還原
-        public short Body_ShortData(byte[] body) {
+        public static short Body_ShortData(byte[] body) {
             short Data = BitConverter.ToInt16(body, 0);
             return Data;
         }
 
         #endregion
 
-
         #region 測試用途
         //解封head
-        public byte[] Unpack_Head(byte[] Packet) {
+        public static byte[] Unpack_Head(byte[] Packet) {
             byte[] Temp_Byte = new byte[12];
             Array.Copy(Packet, 0, Temp_Byte, 0, 12);
             return Temp_Byte;
         }
 
         //解封Body
-        public byte[] Unpack_Body(byte[] Packet, int Length) {
+        public static byte[] Unpack_Body(byte[] Packet, int Length) {
             byte[] Temp_Byte = new byte[Length];
             Array.Copy(Packet, Packet.Length - Length, Temp_Byte, 0, Length);
             return Temp_Byte;
         }
         #endregion
-
     }
 
 
 
+    #region API接口
+    /// <summary>
+    /// 串流資料
+    /// </summary>
+    public interface IStreamData {
 
+        /// <summary>
+        /// 資料串流接收
+        /// </summary>
+        /// <param name="user">資料來源對象</param>
+        /// <param name="dataLength">資料長度</param>
+        /// <returns></returns>
+        byte[] Data(User user, int dataLength);
+    }
 
+    /// <summary>
+    /// 封包Head接口
+    /// </summary>
+    public interface IHeadPacket : IStreamData {
+        //Nothing
+    }
 
-    public class Test {
-        public void Dll() {
-            Console.WriteLine("Test Dll");
+    /// <summary>
+    /// 封包Body接口
+    /// </summary>
+    public interface IBodyPacket : IStreamData {
+        /// <summary>
+        /// 完整性檢查
+        /// </summary>
+        /// <param name="head">資料明細</param>
+        /// <param name="body">資料內容</param>
+        void IntegrityCheck(byte[] head, byte[] body);
+    }
+    #endregion
+
+    /// <summary>
+    /// Bug:串流封包接收類
+    /// </summary>
+    public class ReceivePacket : IStreamData {
+
+        /// <summary>
+        /// 等待資料
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="dataLength"></param>
+        /// <returns></returns>
+        public byte[] Data(User user, int dataLength) {                   
+            int currentLength = dataLength;     //資料長度
+
+            // 創建一個容器，保存封包頭對封包描述的訊息，大小為描述長度。
+            byte[] data_Byte = new byte[currentLength];          
+
+            // 如果當前需要接收的字節數大於0 and 遊戲未退出 則循環接收
+            while (currentLength > 0) {
+
+                //緩存陣列
+                byte[] recvData_Byte = new byte[currentLength];
+
+                if(!(user.Socket.Available == 0)) {
+
+                    //防沾包：如果當前接收的字節組大於緩存區，則按緩存區大小接收，否則按剩餘需要接收的字節組接收。
+                    int recvAlready =   //接收到的字節組
+                        (currentLength >= recvData_Byte.Length)
+                            ? user.Socket.Receive(recvData_Byte, recvData_Byte.Length, 0)
+                            : user.Socket.Receive(recvData_Byte, currentLength, 0);
+
+                    recvData_Byte.CopyTo(data_Byte, data_Byte.Length - currentLength);      //將接收到的字節數保存       
+                    currentLength -= recvAlready;                                           //減掉已經接收到的字節數
+                } else {
+                    Thread.Sleep(50);   //讓出線程
+                }
+
+                //#### UnFinshed：currentLength例外處理
+            }
+            return data_Byte;
         }
+
     }
 
 }

@@ -1,0 +1,10 @@
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/bin/Debug/LearnHub_Server.exe
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/bin/Debug/LearnHub_Server.pdb
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/bin/Debug/Data.dll
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/bin/Debug/Network.dll
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/bin/Debug/Network.pdb
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/bin/Debug/Data.pdb
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/obj/Debug/LearnHub.Server.csprojAssemblyReference.cache
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/obj/Debug/LearnHub.Server.csproj.CopyComplete
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/obj/Debug/LearnHub_Server.exe
+/Users/waylon/Workspace/Github/BaseProject/src/LearnHub.Server/LearnHub_Server/obj/Debug/LearnHub_Server.pdb

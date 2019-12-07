@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 
-using Data;
+using LearnHub.Data;
 
-namespace LearnHub_Server {
+namespace LearnHub.Server {
 
     /// <summary>
     /// 服務器基礎抽象類

@@ -1,5 +1,5 @@
 ﻿
-namespace Data {
+namespace LearnHub.Data {
 
     /// <summary>
     /// 封包型態
@@ -17,6 +17,9 @@ namespace Data {
         RES256
     }
 
+    /// <summary>
+    /// 資料庫型態
+    /// </summary>
     public enum DatabaseType {
         None
     }

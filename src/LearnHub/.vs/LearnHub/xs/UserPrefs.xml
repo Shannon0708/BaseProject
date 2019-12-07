@@ -1,14 +1,22 @@
 ﻿<Properties StartupConfiguration="{C86B200C-BC5C-A86A-4CA8-1B223DF3AFF7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Packages/Network/Network/Packet.cs">
     <Files>
-      <File FileName="Assets/Test.cs" Line="1" Column="1" />
+      <File FileName="../Packages/Network/Network/Packet.cs" Line="16" Column="34" />
+      <File FileName="Assets/Scripts/Client/Client.cs" />
+      <File FileName="Assets/Scripts/ReceivePacket.cs" Line="43" Column="1" />
+      <File FileName="Assets/Scripts/Packet.cs" Line="168" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LearnHub" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Test.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Client" expanded="True" />
+                <Node name="Data" expanded="True">
+                  <Node name="Setup.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -17,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7e3886d7-03fb-4292-8a9e-435ad80a8924" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="25383472-8e5a-42ef-b0b8-91ab7f533915" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

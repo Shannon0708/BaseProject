@@ -4,7 +4,7 @@ using System;
 
 
 //自定義(下方補充)
-using LearnHub_Server.Setup;
+using LearnHub.Server.Setup;
 
 
 //命名空間

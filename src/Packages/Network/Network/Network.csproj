@@ -33,11 +33,12 @@
     <Compile Include="Packet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Temp.cs" />
+    <Compile Include="Setup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\Data\Data.csproj">
+    <ProjectReference Include="..\..\Data\Data\LearnHub.Data.csproj">
       <Project>{766D9A0F-CF56-4939-9EC2-74056D68F8BB}</Project>
-      <Name>Data</Name>
+      <Name>LearnHub.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

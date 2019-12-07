@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data;
+using LearnHub.Data;
 
-namespace LearnHub_Server {
+namespace LearnHub.Util {
 
     #region 註冊
-
     //Package   組件
     //Packet    封包
-
     public delegate void CallBackHandler(User client, byte[] Head, byte[] Body);
 
     /// <summary>
@@ -16,13 +14,14 @@ namespace LearnHub_Server {
     /// </summary>
     public class Register {
 
-        private IRegister register;
+        private readonly IRegister register;   
 
         /// <summary>
         /// 
         /// </summary>
         public Register(IRegister register) {
             this.register = register;
+
         }
 
         /// <summary>
@@ -34,15 +33,13 @@ namespace LearnHub_Server {
 
     }
 
-
-
-
     /// <summary>
     /// 註冊接口
     /// </summary>
     public interface IRegister {
         void Register<T>(T packetType, CallBackHandler callBackHandler);
     }
+
 
     /// <summary>
     /// 封包型態註冊
@@ -68,7 +65,7 @@ namespace LearnHub_Server {
 
             if (!CallBacksDictionary.ContainsKey(packageType)) {
                 CallBacksDictionary.Add(packageType, callBackHandler);
-                Console.WriteLine("# 註冊成功");
+                Console.WriteLine("#封包 註冊成功");
             } else
                 Console.WriteLine("# Warning: 封包註冊了相同的回調事件");
         }
@@ -96,15 +93,13 @@ namespace LearnHub_Server {
             object Type = packetType;
             var databaseType = (DatabaseType)Type;
 
-            if (!CallBacksDictionary.ContainsKey(databaseType))
+            if (!CallBacksDictionary.ContainsKey(databaseType)) {
                 CallBacksDictionary.Add(databaseType, callBackHandler);
-            else
+                Console.WriteLine("#資料庫 註冊成功");
+            } else
                 Console.WriteLine("# Warning: 資料庫註冊了相同的回調事件");
         }
     }
-
-
-
     #endregion
 
 }

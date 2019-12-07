@@ -1,12 +1,11 @@
 ﻿using System.Net.Sockets;
 
-namespace Data {
+namespace LearnHub.Data {
 
     public interface INetworkPacketType {
         PackageType PackageType { get; set; }
         EncryptionType EncryptionType { get; set; }
     }
-
 
     public class User : INetworkPacketType {
 
@@ -27,7 +26,5 @@ namespace Data {
         public EncryptionType EncryptionType { get; set; }
 
     }
-
-
 
 }
