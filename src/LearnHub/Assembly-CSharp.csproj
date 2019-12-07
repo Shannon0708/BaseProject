@@ -66,9 +66,9 @@
     <Compile Include="Assets\Scripts\Client\Client.cs" />
     <Compile Include="Assets\Scripts\Client\ClientBase.cs" />
     <Compile Include="Assets\Scripts\Client\LearnHub_Client.cs" />
-    <Compile Include="Assets\Scripts\Data\DataType.cs" />
-    <Compile Include="Assets\Scripts\Data\Setup.cs" />
-    <Compile Include="Assets\Scripts\Data\User.cs" />
+    <Compile Include="Assets\Scripts\LearnHub_Data\DataType.cs" />
+    <Compile Include="Assets\Scripts\LearnHub_Data\Setup.cs" />
+    <Compile Include="Assets\Scripts\LearnHub_Data\User.cs" />
     <Compile Include="Assets\Scripts\Packet.cs" />
     <Compile Include="Assets\Scripts\ReceivePacket.cs" />
     <Compile Include="Assets\Scripts\StartConnection.cs" />

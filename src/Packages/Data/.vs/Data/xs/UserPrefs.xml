@@ -1,15 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/UserData.cs">
-    <Files>
-      <File FileName="Data/MyClass.cs" Line="24" Column="11" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Data" expanded="True">
-            <Node name="Data" expanded="True">
-              <Node name="UserData.cs" selected="True" />
-            </Node>
+            <Node name="Data" selected="True" />
           </Node>
         </State>
       </Pad>

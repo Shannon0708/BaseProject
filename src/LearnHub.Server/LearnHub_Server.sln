@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network", "..\Packages\Netw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnHub.Data", "..\Packages\Data\Data\LearnHub.Data.csproj", "{766D9A0F-CF56-4939-9EC2-74056D68F8BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{64716B1C-C848-4F02-88B7-3623CAC672FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -25,5 +27,9 @@ Global
 		{766D9A0F-CF56-4939-9EC2-74056D68F8BB}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{766D9A0F-CF56-4939-9EC2-74056D68F8BB}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{766D9A0F-CF56-4939-9EC2-74056D68F8BB}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{766D9A0F-CF56-4939-9EC2-74056D68F8BB} = {64716B1C-C848-4F02-88B7-3623CAC672FD}
+		{39913E45-A3A6-406A-AAEC-9253AD1B8296} = {64716B1C-C848-4F02-88B7-3623CAC672FD}
 	EndGlobalSection
 EndGlobal
