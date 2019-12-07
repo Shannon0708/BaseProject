@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/UserData.cs">
+    <Files>
+      <File FileName="Data/MyClass.cs" Line="24" Column="11" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Data" expanded="True">
+            <Node name="Data" expanded="True">
+              <Node name="UserData.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

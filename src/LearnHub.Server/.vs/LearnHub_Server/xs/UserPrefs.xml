@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{1A206AED-AACD-44CF-B380-5DDEAAD9F463}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Packages/Network/Network/Packet.cs">
+    <Files>
+      <File FileName="../Packages/Data/Data/DataType.cs" Line="6" Column="19" />
+      <File FileName="../Packages/Data/Data/UserData.cs" />
+      <File FileName="../Packages/Network/Network/Packet.cs" Line="10" Column="1" />
+      <File FileName="LearnHub_Server/Server/LearnHubServer.cs" />
+      <File FileName="../Packages/Network/Network/Setup.cs" Line="1" Column="1" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LearnHub_Server" expanded="True">
+            <Node name="LearnHub.Server" expanded="True">
+              <Node name="Server" expanded="True" />
+            </Node>
+            <Node name="Network" expanded="True">
+              <Node name="Packet.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LearnHub.Server PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
