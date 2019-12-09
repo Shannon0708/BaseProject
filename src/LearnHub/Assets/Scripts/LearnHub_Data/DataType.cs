@@ -2,11 +2,13 @@
 namespace LearnHub.Data.Type {
     
     public enum PackageType {
-        None
+        None,
+        Test
     }
 
     public enum EncryptionType {
-        None
+        None,
+        Test
     }
 
 }

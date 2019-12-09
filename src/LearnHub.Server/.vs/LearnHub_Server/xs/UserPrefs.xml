@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{1A206AED-AACD-44CF-B380-5DDEAAD9F463}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Start.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LearnHub_Server/Server/BuildServer.cs">
     <Files>
-      <File FileName="LearnHub_Server/Setup.cs" Line="1" Column="1" />
-      <File FileName="LearnHub_Server/Start.cs" Line="48" Column="1" NotebookId="1" />
-      <File FileName="../Packages/Network/Network/Setup.cs" Line="26" Column="1" NotebookId="1" />
+      <File FileName="LearnHub_Server/Setup.cs" Line="9" Column="53" />
+      <File FileName="LearnHub_Server/Server/BuildServer.cs" Line="35" Column="18" />
+      <File FileName="LearnHub_Server/Server/BaseServer.cs" Line="26" Column="23" />
+      <File FileName="LearnHub_Server/Start.cs" Line="26" Column="17" NotebookId="1" />
+      <File FileName="../Packages/Network/Network/Setup.cs" Line="18" Column="1" NotebookId="1" />
+      <File FileName="LearnHub_Server/Server/LearnHubServer.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,9 @@
               <Node name="Network" expanded="True" />
             </Node>
             <Node name="LearnHub.Server" expanded="True">
-              <Node name="Server" expanded="True" selected="True" />
+              <Node name="Server" expanded="True">
+                <Node name="BaseServer.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

@@ -32,7 +32,7 @@ namespace LearnHub.Server {
         /// <summary>
         /// 啟動服務器
         /// </summary>
-        protected override void Start() {
+        public override void Start() {
 
             #region 啟動服務器
             //建立連線
@@ -44,13 +44,17 @@ namespace LearnHub.Server {
             //啟動監聽(最大監聽量為 SERVER_MAXMEMBER)
             ServerSocket.Listen(ParameterList.SERVER_MAXMEMBER);           
             Console.WriteLine($"服務器已啟動\t Info [Gate {ParameterList.SERVER_HOST}:{ParameterList.SERVER_PORT} ]");
+
             #endregion
 
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected override void Initial() {
-            throw new NotImplementedException();
+
         }
 
 

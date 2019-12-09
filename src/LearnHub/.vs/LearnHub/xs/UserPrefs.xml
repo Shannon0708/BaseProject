@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{C86B200C-BC5C-A86A-4CA8-1B223DF3AFF7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Packet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StartConnection.cs">
     <Files>
-      <File FileName="../Packages/Data/Data/DataType.cs" Line="8" Column="14" />
-      <File FileName="Assets/Scripts/Packet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Client/Client.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/Network/Packet.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Client/ClientBase.cs" Line="15" Column="37" />
+      <File FileName="Assets/Scripts/Callback/PacketCallback.cs" Line="21" Column="70" />
+      <File FileName="Assets/Scripts/StartConnection.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/ReceivePacket.cs" Line="19" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/LearnHub_Data/Setup.cs" Line="15" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/LearnHub_Data/DataType.cs" Line="13" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Callback/RegisterCallback.cs" Line="72" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,7 +17,11 @@
           <Node name="LearnHub" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Packet.cs" selected="True" />
+                <Node name="Callback" expanded="True" />
+                <Node name="Client" expanded="True" />
+                <Node name="LearnHub_Data" expanded="True" />
+                <Node name="Network" expanded="True" />
+                <Node name="StartConnection.cs" selected="True" />
               </Node>
             </Node>
           </Node>

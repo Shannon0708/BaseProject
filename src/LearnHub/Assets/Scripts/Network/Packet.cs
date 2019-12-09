@@ -7,10 +7,6 @@ using LearnHub.Data;
 
 namespace LearnHub.Network.Packet {
 
-    public interface IBuildPackage {
-        byte[] Build_Package (int crcCode, PackageType packageType, EncryptionType encryptionType, byte[] data_Byte);
-    }
-
     /// <summary>
     /// 發送封包
     /// </summary>
@@ -160,18 +156,12 @@ namespace LearnHub.Network.Packet {
         #endregion
     }
 
-
-    public class TypeConverter {
-
-    }
-
-
     /// <summary>
-    /// 收到二進位解封包
+    /// 解析封包 : 收到二進位解封包
     /// </summary>
     public class Unpack {
 
-        #region Head 封包自身資訊
+        #region 解析封包Head : 封包自身資訊
         /// <summary>
         /// 封包的頭之CrcCode還原
         /// </summary>
@@ -225,7 +215,7 @@ namespace LearnHub.Network.Packet {
         }
         #endregion
 
-        #region Body 封包實際內容
+        #region 解析封包Body : 封包實際內容
         /// <summary>
         /// Body內容的資料轉成原有的型態
         /// </summary>
@@ -266,7 +256,6 @@ namespace LearnHub.Network.Packet {
 
         #endregion
 
-
         #region 測試用途
         //解封head
         public byte[] Unpack_Head (byte[] Packet) {
@@ -285,15 +274,5 @@ namespace LearnHub.Network.Packet {
 
     }
 
-
-
-
-
-
-    public class Test {
-        public void Dll () {
-            Console.WriteLine("Test Dll");
-        }
-    }
 
 }

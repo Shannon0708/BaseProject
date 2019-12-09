@@ -6,7 +6,7 @@
     public static class ParameterList {
 
         //服務器
-        public const string SERVER_HOST = "192.168.0.129";
+        public const string SERVER_HOST = "127.0.0.1";
         public const int SERVER_PORT = 8088;
 
         public const int SERVER_MAXMEMBER = 10;

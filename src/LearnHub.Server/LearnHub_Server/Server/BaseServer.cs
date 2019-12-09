@@ -24,7 +24,7 @@ namespace LearnHub.Server {
         /// TCP/IP連線
         /// 啟動線程
         /// </summary>
-        protected abstract void Start();
+        public abstract void Start();
 
         #region 線程 : 線程命名規則 ( 以Thread結尾 )
 

@@ -1,18 +1,42 @@
-﻿using LearnHub.Client;
+﻿using LearnHub.Callback;
+using LearnHub.Client;
+using LearnHub.Client.Setup;
 using LearnHub.Data;
 using LearnHub.Data.Type;
-using LearnHub.Network.Packet;
+
 using System.Net.Sockets;
 using System.Threading;
 using UnityEngine;              //Debug.Log
 
-namespace LearnHub.Receive {
+namespace LearnHub.Network.Packet {
 
+    /// <summary>
+    /// 等待及接收封包
+    /// </summary>
     public class ReceivePacket {
-        readonly Unpack unpack = new Unpack();
+
+        private readonly Unpack unpack; //解析類
+
+        #region Instance
+        /// <summary>
+        /// Instance : 無參數
+        /// </summary>
+        public ReceivePacket() {
+            unpack = new Unpack();
+        }
+
+        /// <summary>
+        /// Instance : 帶解析類參數
+        /// </summary>
+        /// <param name="unpack"></param>
+        public ReceivePacket(Unpack unpack) {
+            this.unpack = unpack;
+        }
+        #endregion
+
         public byte[] Head (Socket UserSocket) {
             int RecvAlready;
-            int HeadLength = Setup.Setup.PACKET_HEADLENGTH;
+            int HeadLength = Setup.PACKET_HEADLENGTH;
             byte[] Head_Byte = new byte[HeadLength];            //把資料抓過來
 
             while (HeadLength > 0) {
@@ -70,9 +94,9 @@ namespace LearnHub.Receive {
 
             //clientCallBack拿封包過來檢查
             if (user.CrcCode == crcCode) {         //比對 封包驗證碼 及 用戶身份Key
-                if (LearnHubClient.CallBacksDictionary.ContainsKey(packageType)) {   //確認 合格封包的類別是否存在
-                    CallBack callBack = new CallBack(user, Head_Byte, Body_Byte, LearnHubClient.CallBacksDictionary[packageType]);      //將封包打包成列隊格式        
-                    LearnHubClient.callBackQueue.Enqueue(callBack);                 //將合格的封包丟進列隊中(回調線程會在列隊中抓取封包解讀，並且根據封包類別去執行不同的方法)
+                if (PacketCallback.callbackDictionary.ContainsKey(packageType)) {   //確認 合格封包的類別是否存在
+                    CallBack callBack = new CallBack(user, Head_Byte, Body_Byte, PacketCallback.callbackDictionary[packageType]);      //將封包打包成列隊格式        
+                    PacketCallback.callbackQueue.Enqueue(callBack);                 //將合格的封包丟進列隊中(回調線程會在列隊中抓取封包解讀，並且根據封包類別去執行不同的方法)
                 } else {
                     Debug.Log($"錯誤 未知的封包型態:{(int)packageType} 註冊表中未發現此類型態的描述!");
                 }
