@@ -1,5 +1,0 @@
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Data/Data/obj/Debug/Data.csprojAssemblyReference.cache
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Data/Data/bin/Debug/Data.dll
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Data/Data/bin/Debug/Data.pdb
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Data/Data/obj/Debug/Data.dll
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Data/Data/obj/Debug/Data.pdb

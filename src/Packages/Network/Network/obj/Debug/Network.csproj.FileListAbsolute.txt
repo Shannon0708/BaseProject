@@ -1,8 +1,0 @@
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/bin/Debug/Network.dll
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/bin/Debug/Network.pdb
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.csprojAssemblyReference.cache
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.dll
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.pdb
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/bin/Debug/Data.dll
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/bin/Debug/Data.pdb
-/Users/waylon/Workspace/Github/BaseProject/src/Packages/Network/Network/obj/Debug/Network.csproj.CopyComplete
