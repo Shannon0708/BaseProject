@@ -1,8 +1,0 @@
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/bin/Debug/LearnHub_Server.exe
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/bin/Debug/LearnHub_Server.pdb
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/bin/Debug/Network.dll
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/bin/Debug/Network.pdb
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.csprojAssemblyReference.cache
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.csproj.CopyComplete
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.exe
-/Users/waylon/Workspace/Github/BaseProject/src/LearnHub_Server/LearnHub_Server/obj/Debug/LearnHub_Server.pdb
