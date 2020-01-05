@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_8;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_8;UNITY_2018_3;UNITY_2018;UNITY_INCLUDE_TESTS;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNING;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_ASTC_ONLY_DECOMPRESS;SUPPORTS_GRANULAR_MODULE_REGISTRATION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;PLATFORM_IOS;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -48,7 +48,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
+    <UnityBuildTarget>iOS:9</UnityBuildTarget>
     <UnityVersion>2018.3.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -63,31 +63,139 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Callback\PacketCallbackMethods.cs" />
-    <Compile Include="Assets\Scripts\Callback\RegisterCallback.cs" />
-    <Compile Include="Assets\Scripts\Client\Client.cs" />
-    <Compile Include="Assets\Scripts\Client\ClientBase.cs" />
-    <Compile Include="Assets\Scripts\Client\LearnHub_Client.cs" />
-    <Compile Include="Assets\Scripts\LearnHub_Data\DataType.cs" />
-    <Compile Include="Assets\Scripts\LearnHub_Data\Setup.cs" />
-    <Compile Include="Assets\Scripts\LearnHub_Data\User.cs" />
-    <Compile Include="Assets\Scripts\Network\Packet.cs" />
-    <Compile Include="Assets\Scripts\Network\ReceivePacket.cs" />
-    <Compile Include="Assets\Scripts\StartConnection.cs" />
+    <Compile Include="Assets\03.Scripts\00.Transition_T\GamingSceneLoader.cs" />
+    <Compile Include="Assets\03.Scripts\00.Transition_T\MainScenesLoader.cs" />
+    <Compile Include="Assets\03.Scripts\00.Transition_T\ScenesLoader.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\01.Network\CallBackMethods.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\01.Network\Network.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\01.Network\NetworkUtil.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\01.Network\Packet.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\02.Data\DataBuffer.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\02.Data\DataBuffer\CourseData.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\02.Data\DataBuffer\SearchData.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\02.Data\LocalData.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\02.Data\Player.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\03.Synchronism\Synchronism.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\04.Room\RoomGenerator.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\Client.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\ClientUtil.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\OffLine.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\Setup.cs" />
+    <Compile Include="Assets\03.Scripts\01.Online\StartOnline.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\00.Data\CourseData\CourseData.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\01.HomePage\GetDataTime.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\01.HomePage\HomeTime.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\CourseSelectBtn.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\CourseSelectController.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\Dropdown\Class_Dropdown.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\Dropdown\College_Dropdown.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\Dropdown\Degree_Dropdown.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\Dropdown\Department_Dropdown.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\Dropdown\DropdownController_T.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\MyScore.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\SearchBtn.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\03.CourseIndex\TotalScore.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\04.MyCourseTable\MyCourseFuncBtn.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\04.MyCourseTable\MyCourseList.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\04.MyCourseTable\SearchCourse.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\BuildList.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\Login\GetID.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\Login\GetPassword.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\Login\Login.cs" />
+    <Compile Include="Assets\03.Scripts\02.Functions\ShowAndHide.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Button Pack\Scripts\Base\Button.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Button Pack\Scripts\BtnSettingMenu.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Button Pack\Scripts\Menu\BtnJoin.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Button Pack\Scripts\Menu\BtnMatchRoomExit.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Keyboard\Keyboard.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Touch Pack\Base\Drag.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Touch Pack\Base\Touch.cs" />
+    <Compile Include="Assets\03.Scripts\03.Input\Touch Pack\Touch_Inventory.cs" />
+    <Compile Include="Assets\03.Scripts\ExtantionUtility\Text\StringInspector.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineCollider.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineConfiner.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineDollyCart.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineExternalCamera.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineFreeLook.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineMixingCamera.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachinePath.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachinePipeline.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoother.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoothPath.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineTargetGroup.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineFramingTransposer.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineGroupComposer.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineHardLockToTarget.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineHardLookAt.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineOrbitalTransposer.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachinePOV.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineSameAsFollowObject.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Components\CinemachineTransposer.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\AxisState.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CameraState.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineBlenderSettings.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineComponentBase.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineDebugLogger.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineExtension.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachinePathBase.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachinePropertyAttribute.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\CinemachineVirtualCameraBase.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\ICinemachineCamera.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\ICinemachineComponent.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\LensSettings.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\NoiseSettings.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\Predictor.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\ReflectionHelpers.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\SplineHelpers.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Base\Runtime\Core\UnityVectorExtensions.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\PostFX\CinemachinePostFX.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\PostFX\CinemachinePostProcessing.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Timeline\CinemachineMixer.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Timeline\CinemachineShot.cs" />
+    <Compile Include="Assets\09.Extensions\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\Scripts\CannonballController.cs" />
+    <Compile Include="Assets\Scripts\CannonController.cs" />
+    <Compile Include="Assets\Scripts\DamageScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Temp\Scripts\DataTest.cs" />
+    <Compile Include="Assets\Temp\Scripts\Indexer.cs" />
+    <Compile Include="Assets\Temp\Scripts\Select_T.cs" />
+    <Compile Include="Assets\Temp\Scripts\Testing.cs" />
+    <Compile Include="Assets\Temp\Scripts\Tree.cs" />
+    <None Include="Assets\09.Extensions\Cinemachine\ReleaseNotes.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -112,12 +220,6 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -297,13 +399,13 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/waylon/Workspace/Github/BaseProject/src/LearnHub/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/waylon/Desktop/LearnHub/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
